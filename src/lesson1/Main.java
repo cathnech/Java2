@@ -25,8 +25,8 @@ public class Main {
 			pl.jump();
 			pl.run();
 			for (Obstacles ob : obs){
-				ob.wall(pl.getJumpLength());
-				ob.truck(pl.getRunHeight());
+				if (! ob.wall(pl.getJumpLength())) break;
+				if (! ob.truck(pl.getRunHeight())) break;
 			}
 			System.out.println();
 		}

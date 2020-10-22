@@ -9,15 +9,18 @@ public class ObsRuntruck implements Obstacles{
 	}
 
 	@Override
-	public void wall(double d) {
+	public boolean wall(double d) {
 
+		return true;
 	}
 
 	@Override
-	public void truck(double d) {
+	public boolean truck(double d) {
 		if (TruckLenght>d) {
 			System.out.println("Пробежал дорожку " + TruckLenght + "м");
+			return true;
 		} else System.out.println("Не смог пробежать дорожку " + TruckLenght + "м");
 
+		return false;
 	}
 }

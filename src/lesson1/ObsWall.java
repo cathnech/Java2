@@ -9,14 +9,17 @@ public class ObsWall implements Obstacles {
 	}
 
 	@Override
-	public void wall(double d) {
+	public boolean wall(double d) {
 		if (WallHeight>d) {
 			System.out.println("Перепрыгнул стену " + WallHeight + "м");
+			return true;
 		} else System.out.println("Не смог перепрыгнуть стену " + WallHeight + "м");
+		return false;
 	}
 
 	@Override
-	public void truck(double d) {
+	public boolean truck(double d) {
 
+		return true;
 	}
 }
